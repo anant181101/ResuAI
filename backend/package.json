@@ -1,0 +1,38 @@
+{
+  "name": "resuai-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "worker": "node src/worker.js",
+    "lint": "eslint .",
+    "test": "node -e \"console.log('no tests yet')\""
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.6.0",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.58.1",
+    "razorpay": "^2.9.5",
+    "@sentry/node": "^8.35.0",
+    "express-rate-limit": "^7.4.0",
+    "bullmq": "^5.9.0",
+    "ioredis": "^5.3.2",
+    "@aws-sdk/client-s3": "^3.656.0",
+    "@aws-sdk/s3-request-presigner": "^3.656.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.11.0"
+  }
+}

@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo:6
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  resume-parser:
+    build: ./microservices/resumeParser
+    environment:
+      - PORT=8081
+    ports:
+      - "8081:8081"
+
+  backend:
+    build: ./backend
+    env_file:
+      - ./backend/.env
+    environment:
+      - PORT=5000
+      - MONGODB_URI=mongodb://mongo:27017/resuai
+      - RESUME_PARSER_URL=http://resume-parser:8081
+      - NODE_ENV=development
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+      - resume-parser
+
+volumes:
+  mongo_data:

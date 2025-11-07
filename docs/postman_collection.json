@@ -1,0 +1,10 @@
+{
+  "info": {"name": "ResuAI API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "item": [
+    {"name": "Health", "request": {"method": "GET", "url": "{{backend}}/api/health"}},
+    {"name": "Analyze", "request": {"method": "POST", "url": "{{backend}}/api/analysis/analyze"}},
+    {"name": "LinkedIn Bio", "request": {"method": "POST", "url": "{{backend}}/api/analysis/bio"}},
+    {"name": "Recent", "request": {"method": "GET", "url": "{{backend}}/api/resumes/recent"}}
+  ],
+  "variable": [{"key": "backend", "value": "http://localhost:5000"}]
+}

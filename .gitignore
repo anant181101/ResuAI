@@ -1,0 +1,49 @@
+# Node
+node_modules/
+.npm/
+dist/
+build/
+.tmp/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Env
+.env
+.env.*
+backend/.env
+frontend/.env
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Coverage
+coverage/
+
+# Go
+microservices/resumeParser/bin/
+microservices/resumeParser/vendor/
+
+# Frontend
+frontend/.vite/
+frontend/.eslintcache
+
+# Docker
+**/.Dockerfile.swp
+
+# Misc
+*.local
+ 
+# Allow example env files
+!**/.env.example
+ 
+# Allow env files (local testing only)
+#!backend/.env
+#!frontend/.env
